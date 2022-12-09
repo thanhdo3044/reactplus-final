@@ -21,17 +21,17 @@ export const SignUp: React.FC = () => {
     })
     .required();
 
-  const { control, handleSubmit,formState:{errors} } = useForm<User>({
+  const { control, handleSubmit, formState: { errors } } = useForm<User>({
     resolver: yupResolver(schema), // yup, joi and even your own.
   });
 
-  const onsubmit = async(data: User) => {
+  const onsubmit = async (data: User) => {
     try {
       navigator("/dashboard");
-      
+
     } catch (error) {
       console.log();
-      
+
     }
   };
   const navigator = useNavigate();
@@ -59,13 +59,13 @@ export const SignUp: React.FC = () => {
             </Title>
           </Col>
         </Row>
-        <Row justify="center" style={{marginTop:-15}}>
+        <Row justify="center" style={{ marginTop: -15 }}>
           <Col>
-            <Text style={{fontSize:24,fontWeight:400}}>OUR REMINDER</Text>
+            <Text style={{ fontSize: 24, fontWeight: 400 }}>OUR REMINDER</Text>
           </Col>
         </Row>
 
-        <Row justify="center" style={{marginTop:15}}>
+        <Row justify="center" style={{ marginTop: 15 }}>
           <Form onFinish={handleSubmit(onsubmit)}>
             <Form.Item>
               <Controller

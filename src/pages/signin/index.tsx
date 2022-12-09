@@ -24,26 +24,26 @@ export const SignIn: React.FC = () => {
     })
     .required();
   const navigator = useNavigate();
-  const { control, handleSubmit,formState:{errors} } = useForm<User>({
+  const { control, handleSubmit, formState: { errors } } = useForm<User>({
     resolver: yupResolver(schema), // yup, joi and even your own.
   });
-  const onsubmit =async(data:User)=>{
+  const onsubmit = async (data: User) => {
     try {
-      if(data.password === data.confirm){
+      if (data.password === data.confirm) {
         await axiosUser.postLogin(data)
         navigator("/signup")
       }
-      else{
+      else {
         alert("Password input does not match ")
-      }    
+      }
     } catch (error) {
       console.log(error);
-      
+
     }
 
-    
+
   }
-  const submitSigIn =()=>{
+  const submitSigIn = () => {
     navigator("/signup");
   }
 
@@ -54,7 +54,7 @@ export const SignIn: React.FC = () => {
           <Image size={true} />
         </Col>
       </Row>
-      <Row justify="center" style={{marginTop:-25}}>
+      <Row justify="center" style={{ marginTop: -25 }}>
         <Row>
           <Col>
             <Title style={{ textAlign: "center" }}>
@@ -68,91 +68,91 @@ export const SignIn: React.FC = () => {
           </Col>
         </Row>
         <Row justify="center">
-          <Col style={{marginTop:-25,marginBottom:15}}>
+          <Col style={{ marginTop: -25, marginBottom: 15 }}>
             <Text >
-            Let’s help you meet up your tasks
+              Let’s help you meet up your tasks
             </Text>
           </Col>
         </Row>
         <Form onFinish={handleSubmit(onsubmit)} >
           <Form.Item>
-          <Controller
-            name="name"
-            control={control}
-            render={({ field }) => (
-              <Input
-               className="input-sign"
-                placeholder="Enter your full name"
-                {...field}
-                status={errors.name ? "error" : ""}
-              />
-            )}
-          />
-          <br/>
-           <Text type="danger">{errors.name?.message}</Text>
+            <Controller
+              name="name"
+              control={control}
+              render={({ field }) => (
+                <Input
+                  className="input-sign"
+                  placeholder="Enter your full name"
+                  {...field}
+                  status={errors.name ? "error" : ""}
+                />
+              )}
+            />
+            <br />
+            <Text type="danger">{errors.name?.message}</Text>
           </Form.Item>
 
           <Form.Item>
-          <Controller
-            name="email"
-            control={control}
-            render={({ field }) => (
-              <Input
-              className="input-sign"
-                placeholder="Enter your email"
-                {...field}
-                status={errors.email ? "error" : ""}
-              />
-            )}
-          />
-          <br/>
-          <Text type="danger">{errors.email?.message}</Text>
+            <Controller
+              name="email"
+              control={control}
+              render={({ field }) => (
+                <Input
+                  className="input-sign"
+                  placeholder="Enter your email"
+                  {...field}
+                  status={errors.email ? "error" : ""}
+                />
+              )}
+            />
+            <br />
+            <Text type="danger">{errors.email?.message}</Text>
           </Form.Item>
 
           <Form.Item>
-          <Controller
-            name="password"
-            control={control}
-            render={({ field }) => (
-              <Input
-              className="input-sign"
-              type="password"
-                placeholder="Enter password"
-                {...field}
-                status={errors.password ? "error" : ""}
-              />
-            )}
-          />
-          <br/>
-           <Text type="danger">{errors.password?.message}</Text>
+            <Controller
+              name="password"
+              control={control}
+              render={({ field }) => (
+                <Input
+                  className="input-sign"
+                  type="password"
+                  placeholder="Enter password"
+                  {...field}
+                  status={errors.password ? "error" : ""}
+                />
+              )}
+            />
+            <br />
+            <Text type="danger">{errors.password?.message}</Text>
           </Form.Item>
 
           <Form.Item>
-          <Controller
-            name="confirm"
-            control={control}
-            render={({ field }) => (
-              <Input
-              type="password"
-              className="input-sign"
-                placeholder="Confirm Password"
-                {...field}
-                status={errors.confirm ? "error" : ""}
-              />
-            )}
-          />
-          <br/>
-          <Text type="danger">{errors.confirm?.message}</Text>
+            <Controller
+              name="confirm"
+              control={control}
+              render={({ field }) => (
+                <Input
+                  type="password"
+                  className="input-sign"
+                  placeholder="Confirm Password"
+                  {...field}
+                  status={errors.confirm ? "error" : ""}
+                />
+              )}
+            />
+            <br />
+            <Text type="danger">{errors.confirm?.message}</Text>
           </Form.Item>
-          
+
           <Form.Item>
-          <Button children="Register" />
+            <Button children="Register" />
           </Form.Item>
-            
+
         </Form>
-       <Row style={{marginTop:-15}}>
-       <Text style={{fontWeight:400,fontSize:14}}>Already have an account ?<Text style={{color:"#D8605B"}} onClick={submitSigIn}> Sign In</Text></Text>
-       </Row>
+        <Row style={{ marginTop: -15 }}>
+          <Text style={{ fontWeight: 400, fontSize: 14 }}>Already have an account ?<Text style={{ color: "#D8605B" }} onClick={submitSigIn}> Sign In</Text></Text>
+        </Row>
       </Row>
     </div>
   );
