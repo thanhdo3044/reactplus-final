@@ -80,8 +80,7 @@ export const SignUp: React.FC = () => {
                   />
                 )}
               />
-              <br />
-              <Text type="danger">{errors.email?.message}</Text>
+              
             </Form.Item>
 
             <Form.Item>
@@ -98,8 +97,7 @@ export const SignUp: React.FC = () => {
                   />
                 )}
               />
-              <br />
-              <Text type="danger">{errors.password?.message}</Text>
+              
             </Form.Item>
 
             <Row style={{ marginTop: 149 }}>

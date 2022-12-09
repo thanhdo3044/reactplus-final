@@ -88,8 +88,7 @@ export const SignIn: React.FC = () => {
                 />
               )}
             />
-            <br />
-            <Text type="danger">{errors.name?.message}</Text>
+            
           </Form.Item>
 
           <Form.Item>
@@ -105,8 +104,7 @@ export const SignIn: React.FC = () => {
                 />
               )}
             />
-            <br />
-            <Text type="danger">{errors.email?.message}</Text>
+            
           </Form.Item>
 
           <Form.Item>
@@ -123,8 +121,7 @@ export const SignIn: React.FC = () => {
                 />
               )}
             />
-            <br />
-            <Text type="danger">{errors.password?.message}</Text>
+           
           </Form.Item>
 
           <Form.Item>
@@ -141,8 +138,7 @@ export const SignIn: React.FC = () => {
                 />
               )}
             />
-            <br />
-            <Text type="danger">{errors.confirm?.message}</Text>
+            
           </Form.Item>
 
           <Form.Item>
