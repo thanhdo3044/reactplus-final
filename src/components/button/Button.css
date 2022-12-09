@@ -1,0 +1,27 @@
+.button {
+    width: 315px;
+    height: 56px;
+    background: linear-gradient(267.72deg, #D8605B -0.89%, #F4C27F 112.29%);
+    mix-blend-mode: normal;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 50px;
+    border-color: transparent;
+}
+
+.button p {
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+
+}
+
+.button p span {
+    margin-left: 5px;
+}
+
+.icon-btn {
+    display: block;
+}
