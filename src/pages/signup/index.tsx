@@ -1,6 +1,5 @@
 import React from "react";
-import { Col, Row, Typography } from "antd";
-import { Form, Input } from "antd";
+import { Col, Row, Typography,Form, Input } from "antd";
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -30,7 +29,7 @@ export const SignUp: React.FC = () => {
       navigator("/dashboard");
 
     } catch (error) {
-      console.log();
+      console.log("Error SigUp:",error);
 
     }
   };
@@ -40,32 +39,31 @@ export const SignUp: React.FC = () => {
   };
 
   return (
-    <div className="welcome-container">
+    <div className="sig-container">
       <Row>
-        <Col style={{ margin: "Auto", paddingTop: 68 }}>
+        <Col className="sig-up-img">
           <Image size={true} />
         </Col>
       </Row>
-      <Row justify="center" style={{ display: "block" }}>
-        <Row style={{ marginTop: -15, display: "block" }}>
-          <Col>
-            <Title style={{ textAlign: "center" }}>
-              <Text style={{ fontSize: 16, fontWeight: 400 }}>
+      <Row className="sig-up-information">
+        <Row className="sig-up-title" >
+          <Col className="sig-up-title-1">
+            <Title >
+              <Text className="sig-up-text-1">
                 Welcome back
               </Text>
-              <Text style={{ fontSize: 16, fontWeight: 400, display: "block" }}>
+              <Text className="sig-up-text-2">
                 to
               </Text>
             </Title>
           </Col>
-        </Row>
-        <Row justify="center" style={{ marginTop: -15 }}>
           <Col>
-            <Text style={{ fontSize: 24, fontWeight: 400 }}>OUR REMINDER</Text>
+            <Text className="sig-up-text-3">OUR REMINDER</Text>
           </Col>
         </Row>
+        
 
-        <Row justify="center" style={{ marginTop: 15 }}>
+        <Row className="sig-up-log">
           <Form onFinish={handleSubmit(onsubmit)}>
             <Form.Item>
               <Controller
@@ -100,17 +98,17 @@ export const SignUp: React.FC = () => {
               
             </Form.Item>
 
-            <Row style={{ marginTop: 149 }}>
+            <Row className="sig-up-btn">
               <Form.Item>
                 <Button children="Sign In" />
               </Form.Item>
             </Row>
           </Form>
         </Row>
-        <Row justify="center" style={{ marginTop: -15 }}>
-          <Text style={{ fontWeight: 400, fontSize: 14 }}>
+        <Row className="sig-up-footer">
+          <Text className="sig-up-footer-text">
             Don’t have an account ?
-            <Text style={{ color: "#D8605B" }} onClick={submitSigUp}>
+            <Text className="sig-up-footer-text-1" onClick={submitSigUp}>
               {" "}
               Sign Up
             </Text>

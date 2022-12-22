@@ -1,0 +1,31 @@
+.wel-img {
+    margin-top: 150px;
+}
+
+.wel-box-title {
+    display: flex;
+    justify-content: center;
+}
+
+.wel-title-text {
+    text-align: center;
+    justify-content: center;
+}
+
+.wel-title-text-1,
+.wel-title-text-2 {
+    font-size: 24px;
+}
+
+.wel-title-text-2 {
+    display: block;
+}
+
+.wel-text-content {
+    width: 281px;
+    text-align: center;
+}
+
+.wel-footer {
+    margin-top: 90px;
+}

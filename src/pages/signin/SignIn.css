@@ -5,3 +5,45 @@
     height: 51px;
     padding: 16px 30px;
 }
+
+.sig-img {
+    margin: auto;
+    margin-top: 39px;
+}
+
+.sig-information {
+    display: flex;
+    justify-content: center;
+}
+
+.sig-title {
+    text-align: center;
+}
+
+.sig-title-1,
+.sig-title-2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.sig-title-2 {
+    display: block;
+}
+
+.sig-title-3 {
+    margin-top: -25px;
+    margin-bottom: 15px;
+}
+
+.sig-footer-in {
+    margin-top: -15px;
+}
+
+.sig-footer-in-text {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.sig-footer-in-text-2 {
+    color: #d8605b;
+}

@@ -5,3 +5,58 @@
     height: 51px;
     padding: 16px 30px;
 }
+
+.sig-up-img {
+    margin: auto;
+    padding-top: 68px;
+}
+
+.sig-up-information {
+    justify-content: center;
+}
+
+.sig-up-title {
+    text-align: center;
+    display: block;
+    margin-top: -32px;
+}
+
+.sig-up-title-1 {
+    display: block;
+}
+
+.sig-up-text-1,
+.sig-up-text-2 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.sig-up-text-2 {
+    display: block;
+}
+
+.sig-up-text-3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.sig-up-log {
+    margin-top: 15px;
+}
+
+.sig-up-btn {
+    margin-top: 140px;
+}
+
+.sig-up-footer {
+    margin-top: -15px;
+}
+
+.sig-up-footer-text {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.sig-up-footer-text-1 {
+    color: #D8605B;
+}

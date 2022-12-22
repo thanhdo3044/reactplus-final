@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Col, Row, Typography } from "antd";
 import { Navigate } from "react-router-dom";
 
+import "./Welcome.css"
 import { Button } from "../../components/button";
 import { Image } from "../../components/image";
 
@@ -14,21 +15,21 @@ export const Welcome: React.FC = () => {
   return (
     <div className="welcome-container">
       <Row>
-        <Col style={{ marginTop: 150 }}>
+        <Col className="wel-img">
           <Image size={false} />
         </Col>
       </Row>
-      <Row justify="center">
+      <Row className="wel-box-title" >
         <Row>
           <Col>
-            <Title style={{ textAlign: "center" }}>
-              <Text style={{ fontSize: 24 }}>Welcome to </Text>
-              <Text strong style={{ display: "block", fontSize: 24 }}>OUR REMINDER</Text>
+            <Title className="wel-title-text" >
+              <Text className="wel-title-text-1" >Welcome to </Text>
+              <Text className="wel-title-text-2">OUR REMINDER</Text>
             </Title>
           </Col>
         </Row>
-        <Row justify="center">
-          <Col style={{ width: 281, textAlign: "center" }}>
+        <Row >
+          <Col className="wel-text-content">
             <Text >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum
               dictum tempus, interdum at dignissim metus. Ultricies sed nunc.
@@ -36,8 +37,8 @@ export const Welcome: React.FC = () => {
           </Col>
         </Row>
       </Row>
-      <Row justify="center">
-        <Col style={{ marginTop: 90 }} >
+      <Row className="wel-title-text">
+        <Col className="wel-footer">
           {isSub && <Navigate to="/signin" />}
           <Button children="Get Start" icon={true} onclick={onClickLogin} />
         </Col>

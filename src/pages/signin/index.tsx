@@ -1,6 +1,5 @@
 import React from "react";
-import { Col, Row, Typography } from "antd";
-import { Form, Input } from "antd";
+import { Col, Row, Typography,Form, Input } from "antd";
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -48,27 +47,27 @@ export const SignIn: React.FC = () => {
   }
 
   return (
-    <div className="welcome-container">
+    <div className="sig-container">
       <Row>
-        <Col style={{ margin: "Auto", paddingTop: 38 }}>
+        <Col className="sig-img" >
           <Image size={true} />
         </Col>
       </Row>
-      <Row justify="center" style={{ marginTop: -25 }}>
+      <Row className="sig-information" >
         <Row>
           <Col>
-            <Title style={{ textAlign: "center" }}>
-              <Text style={{ fontSize: 24, fontWeight: 400 }}>
-                Get’s things done{" "}
+            <Title className="sig-title">
+              <Text className="sig-title-1">
+                Get’s things done
               </Text>
-              <Text style={{ fontSize: 24, fontWeight: 400, display: "block" }}>
+              <Text className="sig-title-2" >
                 with TODO
               </Text>
             </Title>
           </Col>
         </Row>
-        <Row justify="center">
-          <Col style={{ marginTop: -25, marginBottom: 15 }}>
+        <Row className="sig-title">
+          <Col className="sig-title-3" >
             <Text >
               Let’s help you meet up your tasks
             </Text>
@@ -146,8 +145,8 @@ export const SignIn: React.FC = () => {
           </Form.Item>
 
         </Form>
-        <Row style={{ marginTop: -15 }}>
-          <Text style={{ fontWeight: 400, fontSize: 14 }}>Already have an account ?<Text style={{ color: "#D8605B" }} onClick={submitSigIn}> Sign In</Text></Text>
+        <Row className="sig-footer-in" >
+          <Text className="sig-footer-in-text" >Already have an account ?<Text className="sig-footer-in-text-2" onClick={submitSigIn}> Sign In</Text></Text>
         </Row>
       </Row>
     </div>
